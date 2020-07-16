@@ -1,0 +1,23 @@
+def find_score(string):
+    vowel =['A','E','I','O','U']
+    S=0
+    K=0
+    for i in range(len(string)):
+        if string[i] in vowel:
+            K+= len(string)-i
+            print("value of k is" ,K)
+        else:
+            S+=len(string)-i
+            print("value of s is" ,S)
+    if S>K:
+        #print(S)
+        #print(K)
+        print("Stuart"+" "+ "%d" % S)
+    elif K>S:
+        print("Kevin"+" "+'%d' % K)
+    else:
+        print("Draw")
+
+string = input("please enter the string : ").strip()
+  #sub_string = input("please enter the substring :  ").strip()
+find_score(string)
